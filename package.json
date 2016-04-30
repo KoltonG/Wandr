@@ -1,0 +1,19 @@
+{
+  "name": "wandr",
+  "version": "1.0.0",
+  "description": "Wandr app allows travellers to barter their skill for goods and services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoltonG/Wandr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KoltonG/Wandr/issues"
+  },
+  "homepage": "https://github.com/KoltonG/Wandr#readme"
+}
