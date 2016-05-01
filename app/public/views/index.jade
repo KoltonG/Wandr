@@ -1,0 +1,16 @@
+html(ng-app="wandr" ng-controller="WandrController")
+  head
+    title Wandr
+    link(rel='shortcut icon', href='favicon.ico') 
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Righteous')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat')
+    link(rel='stylesheet', href='/main.css')
+
+    //- BASE
+    base(href='/')
+  body
+    ui-view
+    //- SCRIPTS
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js')
+    script(src='/main.js')
