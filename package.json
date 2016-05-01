@@ -4,7 +4,9 @@
   "description": "Wandr app allows travellers to barter their skill for goods and services",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart"  : "gulp &",
+    "start"     : "PORT=9000 NODE_ENV=DEVELOP nodemon app.js | bunyan",
+    "debug"     : "PORT=9000 node-debug app.js | bunyan"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/KoltonG/Wandr/issues"
   },
-  "homepage": "https://github.com/KoltonG/Wandr#readme"
+  "homepage": "https://github.com/KoltonG/Wandr#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1"
+  }
 }
