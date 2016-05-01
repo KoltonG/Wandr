@@ -3,7 +3,7 @@
   height: 100%;
   position: absolute;
   background-image: url('road.png');
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   z-index: -1;
@@ -23,7 +23,7 @@
   width: 100%;
   text-align: center;
   color: #fff;
-  top: calc(50% - 44px);
+  top: calc(50% - 55px);
   position: absolute;
 
   h1 {

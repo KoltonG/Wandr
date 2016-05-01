@@ -1,0 +1,29 @@
+{
+  "apps" : [{
+      "name"              : "WandrWS01",
+      "script"            : "app.js",
+      "max_restarts"      : 15,
+      "max_memory_restart": "250M",
+      "restart_delay"     : 5000,
+      "env_production"    : {
+        "NODE_ENV": "PRODUCTION",
+        "PORT": 9000
+      }
+    }],
+  "deploy" : {
+    "WandrWS01-Production" : {
+      "user" : "ubuntu",
+      "host" : [
+        {
+          "host": "ec2-54-85-38-29.compute-1.amazonaws.com",
+          "port": "22"
+        }
+      ],
+      "key"  : "/Users/KoltonG/.ssh/aws",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:KoltonG/Wandr.git",
+      "path" : "/home/ubuntu/Wandr",
+      "post-deploy" : "sudo npm install --production && pm2 startOrRestart prod.json --env production && sudo pm2 startup -u ubuntu && sudo pm2 save -u ubuntu"
+    }
+  }
+}
