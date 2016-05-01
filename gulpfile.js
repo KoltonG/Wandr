@@ -20,19 +20,19 @@ if(process.env.NODE_ENV === 'PRODUCTION'){
 /********** GULP TASKS **********/
 /*******************************/
 // Complile sass into css
-gulp.task('sass', () => {
+gulp.task('sass', function() {
   gulp.src('./app/public/stylesheets/main.scss')
     .pipe(sass.sync(sassObj).on('error', sass.logError))
     .pipe(gulp.dest('.'));
 });
 
 // When there is a change in the sass files, call the sass task
-gulp.task('sass:watch', () => {
+gulp.task('sass:watch', function() {
   gulp.watch('./app/public/stylesheets/**/*.scss', ['sass']);
 });
 
 // Concatenate all the javascript files
-gulp.task('concat', function () {
+gulp.task('concat', function() {
   gulp.src(['./app/public/javascripts/app.js', './app/public/javascripts/vendors/*', 
     './app/public/javascripts/controllers/*'])
     .pipe(concat('main.js'))
@@ -40,7 +40,7 @@ gulp.task('concat', function () {
 });
 
 // When there is a change in the sass files, call the sass task
-gulp.task('concat:watch', () => {
+gulp.task('concat:watch', function() {
   gulp.watch('./app/public/javascripts/**/*.js', ['concat']);
   gulp.watch('./app/public/javascripts/*.js', ['concat']);
 });
