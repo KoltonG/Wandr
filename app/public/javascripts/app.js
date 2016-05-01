@@ -1,7 +1,7 @@
 /*************************/
 /********** APP **********/
 /*************************/
-var app = angular.module('wandr', ['ui.router']);
+var app = angular.module('wandr', ['ui.router', 'ui.select', 'ngSanitize']);
 
 
 /****************************/
@@ -10,9 +10,15 @@ var app = angular.module('wandr', ['ui.router']);
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     // Landing
-    .state('Landing', {
+    .state('landing', {
       url: '/',
       templateUrl: 'partials/landing'
+    })
+    // Search
+    .state('search', {
+      url: '/search/:country',
+      templateUrl: 'partials/search',
+      controller: 'SearchController'
     });
 
     // For any unmatched url, redirect to /login

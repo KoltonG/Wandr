@@ -1,10 +1,19 @@
 .bg
 .hero
-  h1 Wandr.
-  h5 Go See Where You'll Wonder
+  h1 
+    span(style='color: #AFFFAF;') Go
+    | Wandr.
+  h5 Go See Where You'll Wander
   br
   br
-  p Wandr helps travellers trade their time and skills for local good and services
+  p Help travellers travel more freely by letting them exchange time and skills for goods and services!
+  .search-container
+    h3(style='margin-bottom: 15px;') Where would you like to go?
+    ui-select(ng-model='selected.value')
+      ui-select-match
+        span(ng-bind='$select.selected.name')
+      ui-select-choices(repeat='item in (itemArray | filter: $select.search) track by item.id')
+        span(ng-bind='item.name', ng-click='searchLocation(item.name)')
 .app-container
   .google
   .apple

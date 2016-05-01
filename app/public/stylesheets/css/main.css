@@ -1,0 +1,81 @@
+/* line 1, /Users/KoltonG/Code/Personal/wandr/app/public/stylesheets/base/_reset.scss */
+body {
+  font-size: 16px;
+  margin: 0;
+  font-family: 'Montserrat', Helvetica;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 1, /Users/KoltonG/Code/Personal/wandr/app/public/stylesheets/pages/_landing.scss */
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("road.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  z-index: -1;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+/* line 13, /Users/KoltonG/Code/Personal/wandr/app/public/stylesheets/pages/_landing.scss */
+.bg:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 22, /Users/KoltonG/Code/Personal/wandr/app/public/stylesheets/pages/_landing.scss */
+.hero {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  top: calc(30%);
+  position: absolute;
+}
+
+/* line 29, /Users/KoltonG/Code/Personal/wandr/app/public/stylesheets/pages/_landing.scss */
+.hero h1 {
+  font-family: 'Righteous', Helvetica;
+  font-size: 48px;
+  margin: 0 0 10px 0;
+}
+
+/* line 35, /Users/KoltonG/Code/Personal/wandr/app/public/stylesheets/pages/_landing.scss */
+.hero h5 {
+  font-size: 16px;
+  font-weight: 100;
+  margin: 0;
+}
+
+/* line 42, /Users/KoltonG/Code/Personal/wandr/app/public/stylesheets/pages/_landing.scss */
+.app-container {
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 200px);
+  width: 400px;
+}
+
+/* line 48, /Users/KoltonG/Code/Personal/wandr/app/public/stylesheets/pages/_landing.scss */
+.app-container div {
+  width: 150px;
+  height: 50px;
+  display: inline-block;
+  background-size: 100% 100%;
+}
+
+/* line 54, /Users/KoltonG/Code/Personal/wandr/app/public/stylesheets/pages/_landing.scss */
+.app-container div:first-child {
+  background-image: url("google-app.png");
+  margin-right: 100px;
+}
+
+/* line 59, /Users/KoltonG/Code/Personal/wandr/app/public/stylesheets/pages/_landing.scss */
+.app-container div:last-child {
+  background-image: url("apple-app.png");
+}

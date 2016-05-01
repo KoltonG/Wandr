@@ -1,9 +1,20 @@
 html(ng-app="wandr" ng-controller="WandrController")
   head
     title Wandr
-    link(rel='shortcut icon', href='favicon.ico') 
+    meta(name='description', content='Help travellers to travel more freely by letting them exchange time and skills for goods and services while traveling.')
+    meta(name='viewport', content="initial-scale=1.0, user-scalable=no")
+    meta(charset="utf-8")
+    link(rel='shortcut icon', href='favicon.ico')
+    //- Fonts
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Righteous')
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat')
+    //- Required For UI Select
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.16.1/select.min.css')
+    
+    //- Main Stylesheets
     link(rel='stylesheet', href='/main.css')
 
     //- BASE
@@ -13,4 +24,9 @@ html(ng-app="wandr" ng-controller="WandrController")
     //- SCRIPTS
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js')
+    //- Required For UI Select
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.5/angular-sanitize.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.16.1/select.min.js')
+
     script(src='/main.js')

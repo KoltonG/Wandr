@@ -1,0 +1,39 @@
+.country-image {
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    margin-top: -450px;
+    -webkit-filter: blur(2px);
+  }
+
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+  }
+
+  h1 {
+    position: absolute;
+    top: 41%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Montserrat', Helvetica;
+    font-size: 48px;
+  }
+}
+
+.result-container {
+  height: calc(100% - 150px);
+  background-color: #F4F4F4;
+  text-align: center;
+  padding-top: 30px;
+}
